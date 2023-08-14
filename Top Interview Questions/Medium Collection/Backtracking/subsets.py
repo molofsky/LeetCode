@@ -6,10 +6,24 @@ The solution set must not contain duplicate subsets. Return the solution in any 
 
 class Solution:
   def subsets(self, nums: List[int]) -> List[List[int]]:
-      # Solution w/o Backtracking
+      result = []
+      
+      def subsetHelper(index, subset):
+          result.append(subset[:])
+          for i in range(index + 1, len(nums)):
+              subset.append(nums[i])
+              subsetHelper(i, subset)
+              subset.pop()
+      
+      subsetHelper(-1, [])
+      return result
+            
+      """ 
+      Solution w/o Backtracking
       result = [[]]
       for num in nums:
           result += [cur + [num] for cur in result]
       return result
+      """
         
             
