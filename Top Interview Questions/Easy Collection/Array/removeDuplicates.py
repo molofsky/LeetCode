@@ -23,3 +23,17 @@ class Solution:
                 cur_unique = num
                 unique_idx += 1
         return unique_idx
+
+        """
+        Another Solution
+
+        if not len(nums): return 0
+        
+        idx = 0
+        for i in range(len(nums)):
+            num = nums[i]
+            if num not in nums[i + 1:]:
+                nums[idx] = num
+                idx += 1
+                
+        return idx
