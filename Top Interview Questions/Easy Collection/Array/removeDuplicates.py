@@ -25,7 +25,7 @@ class Solution:
         return unique_idx
 
         """
-        Another Solution
+        Solution #2
 
         if not len(nums): return 0
         
@@ -37,3 +37,4 @@ class Solution:
                 idx += 1
                 
         return idx
+        """
