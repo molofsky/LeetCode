@@ -10,3 +10,14 @@ class Solution:
         for num in nums:
             res ^= num # xor all elements in array leaves the unique number
         return res
+        
+        """
+        Solution 2
+
+        for i in range(len(nums)):
+            num = nums[i]
+            if num not in nums[:i] + nums[i + 1:]:
+                return num
+        
+        return 0
+        """
