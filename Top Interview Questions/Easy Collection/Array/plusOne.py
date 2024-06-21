@@ -13,7 +13,12 @@ class Solution:
             else: 
                 digits[i] += 1
                 return digits
-            
+
+        """
+        digits.insert(0, 1) # insert returns None so we can't return immediately
+        return digits
+        """
+        
         return [1] + digits
 
         """
