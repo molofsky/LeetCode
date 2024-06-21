@@ -21,6 +21,7 @@ class Solution:
             if (nums[i] == 0):
                 nums.remove(nums[i])
                 nums += [0]
+                
         Solution #3
 
         index_nonzero = 0
