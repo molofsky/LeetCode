@@ -15,3 +15,19 @@ class Solution:
                 return digits
             
         return [1] + digits
+
+        """
+        Solution #2
+
+        temp = 0
+        for i in reversed(range(len(digits))):
+            temp = digits[i] + 1
+            if temp < 10:
+                digits[i] = temp
+                break
+            else:
+                digits[i] = 0
+                if i == 0:
+                    digits.insert(0, 1)
+        return digits
+        """
