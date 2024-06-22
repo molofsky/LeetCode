@@ -24,9 +24,7 @@ class Solution:
             x *= -1
         
         x_str = str(x)
-        x_str2 = x_str[::-1] # strings are immutable, need new string x_str2, we cannot assing x_str[:] = x_str[::-1]
-        # Put differently Python strings cannot be modified in place
-        
+        x_str2 = x_str[::-1] # Python strings are immutable and cannot be modified in place. We need a new string x_str2 because we cannot assign x_str[:] = x_str[::-1]  
         res = -int(x_str2) if sign else int(x_str2)
         if res > 2**31 - 1 or res < -2**31: return 0
         return res
