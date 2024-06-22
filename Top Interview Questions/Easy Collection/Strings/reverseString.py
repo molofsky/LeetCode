@@ -10,3 +10,10 @@ class Solution:
         Do not return anything, modify s in-place instead.
         """
         s[:] = s[::-1]
+
+        """
+        Solution #2
+
+        for i in range(len(s) // 2):
+            s[i], s[len(s) - i - 1] = s[len(s) - i - 1], s[i]
+        """
