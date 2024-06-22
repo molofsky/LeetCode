@@ -25,6 +25,7 @@ class Solution:
         
         x_str = str(x)
         x_str2 = x_str[::-1] # strings are immutable, need new string x_str2, we cannot assing x_str[:] = x_str[::-1]
+        # python strings cannot be modified in place
         
         res = -int(x_str2) if sign else int(x_str2)
         if res > 2**31 - 1 or res < -2**31: return 0
