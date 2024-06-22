@@ -25,3 +25,38 @@ class Solution:
                 if (len(nums) != len(set(nums))): return False
         
         return True
+
+        """
+        Solution #2
+
+        for col_idx in range(9):
+                col = []
+                for row_idx in range(9):
+                    cell = board[col_idx][row_idx]
+                    if cell != '.':
+                        col.append(cell)
+                    if len(col) != len(set(col)):
+                        return False
+            
+            for row_idx in range(9):
+                row = []
+                for col_idx in range(9):
+                    cell = board[col_idx][row_idx]
+                    if cell != '.':
+                        row.append(cell)
+                    if len(row) != len(set(row)):
+                        return False
+                    
+            for col_idx in range(0, 9, 3):
+                for row_idx in range(0, 9, 3):
+                    sub_box = []
+                    for col_idx2 in range(3):
+                        for row_idx2 in range(3):
+                            cell = board[col_idx + col_idx2][row_idx + row_idx2]
+                            if cell != '.':
+                                sub_box.append(cell)
+                    if len(sub_box) != len(set(sub_box)):
+                        return False
+            
+            return True
+        """
