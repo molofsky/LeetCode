@@ -42,3 +42,33 @@ class Solution:
         res = res if res >= -2**31 else -2**31
         res = res if res <= 2**31 - 1 else 2**31 - 1
         return res
+
+        """
+        Solution #2
+
+        s2 = s.lstrip()
+        if len(s2) < 1: return 0
+        sign = 1
+        i = 0
+        if s2[0] == '-':
+            sign *= -1
+            i += 1
+        if s2[0] == '+':
+            i += 1
+        
+        while i < len(s2) and s2[i] == '0':
+            i+=1
+        
+        res = []
+        while i < len(s2):
+            if not s2[i].isnumeric():
+                break
+            res.append(s2[i])
+            i += 1
+        
+        if len(res) == 0: return 0
+        res = sign * int("".join(res))
+        if res > 2**31 - 1: res = 2**31 - 1
+        if res < -2**31: res = -2**31
+        return res
+        """
