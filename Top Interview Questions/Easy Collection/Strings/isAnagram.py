@@ -26,3 +26,29 @@ class Solution:
             if count[t[i]] < 0 : return False
             
         return True
+
+        """
+        Solution #2
+
+        if len(s) != len(t): return False
+        
+        words = {}
+        
+        for char in s:
+            if char not in words:
+                words[char] = 1
+            else:
+                words[char] += 1
+        
+        for char in t:
+            if char not in words:
+                return False
+            else:
+                words[char] -= 1
+        
+        for val in words.values():
+            if val != 0:
+                return False
+        
+        return True
+        """
