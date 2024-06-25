@@ -29,7 +29,7 @@ class Solution:
         """
         Solution #2 
 
-        if strs is None:
+        if not strs:
             return ""
 
         min_len = min(len(s) for s in strs)
