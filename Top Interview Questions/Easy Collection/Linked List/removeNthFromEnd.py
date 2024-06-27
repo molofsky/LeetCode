@@ -37,17 +37,17 @@ class Solution:
         """
         Solution #2 
 
-        head2 = ListNode(0, head)
-        first = head2
-        second = head2
+        head = ListNode(val=0, next=head)
+        first = head
+        second = head
         
         for _ in range(n + 1):
             first = first.next
-
+        
         while first:
             first = first.next
             second = second.next
         
         second.next = second.next.next
-        return head2.next
+        return head.next
         """
