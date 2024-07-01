@@ -19,7 +19,22 @@ class Solution:
             curr = curr.next
         
         return False
+
+        """
+        Solution #2 Floyd's Cycle Detection Algorithm
+
+        if not head or not head.next:
+           return False
+        
+        fast, slow = head, head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True
             
+        return False
+        """
             
         
         
