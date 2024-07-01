@@ -29,6 +29,36 @@ class Solution:
             second_half = second_half.next
         
         return True
+
+        """
+        Solution #2 (Reverse Second Half)
+
+        if not head or not head.next:
+            return True
+        
+        slow, fast = head, head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            
+        prev = None
+        curr = slow
+        while curr:
+            node_next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = node_next
+            
+        first_half, second_half = head, prev
+        while first_half and second_half:
+            if first_half.val != second_half.val:
+                return False
+            
+            first_half = first_half.next
+            second_half = second_half.next
+        
+        return True
+        """
             
         
         
