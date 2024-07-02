@@ -50,7 +50,7 @@ class Solution:
             curr = node_next
             
         first_half, second_half = head, prev
-        while first_half and second_half:
+        while second_half:
             if first_half.val != second_half.val:
                 return False
             
