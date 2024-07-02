@@ -14,23 +14,23 @@ class Solution:
         
         return max(right_depth, left_depth) + 1
 
-    """
-    Solution #2 Iterative (BFS)
-
-    if root is None:
-            return 0
-            
-    count = 0
-    queue = [root]
-    while queue:
-        level_len = len(queue)
-        for _ in range(level_len):
-            node = queue.pop(0)
-
-            if node.right:
-                queue.append(node.right)
-            if node.left:
-                queue.append(node.left)
-        count += 1
-    return count
-    """
+        """
+        Solution #2 Iterative (BFS)
+    
+        if root is None:
+                return 0
+                
+        count = 0
+        queue = [root]
+        while queue:
+            level_len = len(queue)
+            for _ in range(level_len):
+                node = queue.pop(0)
+    
+                if node.right:
+                    queue.append(node.right)
+                if node.left:
+                    queue.append(node.left)
+            count += 1
+        return count
+        """
